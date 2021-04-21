@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<h3><i>Q.{{ no }}&nbsp;&nbsp;&nbsp;</i> {{ ask.name }}</h3>
+<div>
+    {% for i in ask.options %}
+        <div class="mb-3">
+            <a href="{{ url_for('change', num=no, value=i) }}" class="btn opt-btn">{{ i }}</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
